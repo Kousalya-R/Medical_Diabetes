@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pickle
 from sklearn.preprocessing import StandardScaler
 st.title("Medical Diagonistic app")
-st.markdown('Does women have diabetes or not? 😎')
+st.markdown('✍️ Does women have diabetes or not? 🧑‍💻')
 # step1" Load the pickel model
 model=open('rfc.pickle','rb')
 clf=pickle.load(model)
@@ -31,10 +31,10 @@ data={
 }
 
 input_data=pd.DataFrame([data])
-st.write(input_data)
+# st.write(input_data)
 # step 4 
 prediction=clf.predict(input_data)[0]
-st.write(prediction)
+# st.write(prediction)
 if st.button("prediction"):
     if prediction==0:
         st.success('Women is healthy')
